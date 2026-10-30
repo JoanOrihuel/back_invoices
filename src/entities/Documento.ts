@@ -7,7 +7,7 @@ import { Entity, PrimaryGeneratedColumn, Column, TableInheritance, Transaccio, O
     name: 'tipus',
   },
 })
-export class Document {
+export class Documento {
 
     @PrimaryGeneratedColumn()
     id: number = 0;

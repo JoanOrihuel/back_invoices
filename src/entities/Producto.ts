@@ -1,8 +1,7 @@
 import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
-import { AgenteComercial } from "./AgenteComercial";
 
 @Entity()
-export class Proveedor extends AgenteComercial {
+export class Producto {
     @PrimaryGeneratedColumn()
     id:number=0
 

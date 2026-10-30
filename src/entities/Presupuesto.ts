@@ -1,9 +1,9 @@
 import { Entity, PrimaryGeneratedColumn, Column } from "typeorm"
 import { ChildEntity } from 'typeorm';
-import { Document } from "./Documento";
+import { Documento } from "./Documento";
 
 @ChildEntity()
-export class Presupost extends Document {
+export class Presupuesto extends Documento {
 
     @PrimaryGeneratedColumn()
     id: number = 0;
