@@ -1,6 +1,6 @@
 import { Entity, PrimaryGeneratedColumn, Column } from "typeorm"
 import { ChildEntity } from 'typeorm';
-import { Document } from "./Document";
+import { Document } from "./Documento";
 
 @ChildEntity()
 export class Presupost extends Document {

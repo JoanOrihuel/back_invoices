@@ -1,5 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, Column, ChildEntity, OneToMany } from "typeorm"
-import { Document } from "./Document";
+import { Document } from "./Documento";
 import { Albaran } from "./Albaran";
 
 @ChildEntity()
