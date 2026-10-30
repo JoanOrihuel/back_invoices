@@ -9,9 +9,7 @@ export class Factura extends Document {
     id: number = 0;
     
     @OneToMany(
-    () => Albaran,
-    albaran => albaran.factura,
-  )
-  albarans: Albaran[];
+    () => Albaran,albaran => albaran.factura)
+    albarans: Albaran[];
 
 }
