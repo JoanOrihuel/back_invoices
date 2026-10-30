@@ -34,8 +34,7 @@ export class Transaccion {
 })
     unidad_medida!: UnidadMedida;
 
-    @ManyToOne(()=> Producto
-
-    )
+    @ManyToOne(()=> Producto)
+    producto!: Producto;
 
 }
