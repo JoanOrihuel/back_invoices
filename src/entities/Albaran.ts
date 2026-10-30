@@ -1,9 +1,9 @@
 import { Entity, PrimaryGeneratedColumn, Column, ChildEntity, ManyToOne } from "typeorm"
-import { Document } from "./Documento";
+import { Documento } from "./Documento";
 import { Factura } from "./Factura";
 
 @ChildEntity()
-export class Albaran extends Document{
+export class Albaran extends Documento{
 
     @PrimaryGeneratedColumn()
     id: number = 0;

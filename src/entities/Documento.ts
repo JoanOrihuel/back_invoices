@@ -8,7 +8,7 @@ export class Documento {
     id: number = 0;
 
     @OneToMany(
-    () => Transaccion,transaccion => transaccion.documento,)
+    () => Transaccion,transaccion => transaccion.documento)
     transacciones: Transaccion[];
     
 }
