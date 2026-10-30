@@ -10,5 +10,5 @@ export class Local {
     @Column()
     direccion:string="";
     @OneToMany(()=>Cliente,cliente=>cliente.local)
-    clientes:Cliente[] = [];
+    clientes:Cliente[];
 }

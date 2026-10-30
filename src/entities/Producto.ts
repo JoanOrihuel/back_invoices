@@ -11,8 +11,8 @@ export class Producto {
     @Column()
     stock: number = 0;
     @OneToMany(() => Transaccion, transaccion => transaccion.producto)
-    transacciones: Transaccion[] = [];
+    transacciones: Transaccion[];
     @OneToMany(() => Distribucion, distribucion => distribucion.producto)
-    distribuciones: Distribucion[] = [];
+    distribuciones: Distribucion[];
 
 }

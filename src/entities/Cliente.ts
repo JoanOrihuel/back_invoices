@@ -10,8 +10,6 @@ export class Cliente extends AgenteComercial implements ICliente {
     id:number=0
     @Column()
     dni: string=""
-    @Column()
-    nombre:string=""
 
     @ManyToOne(()=>Local,(local=>local.clientes))
     local:Local
