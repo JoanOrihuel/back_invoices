@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+=======
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+>>>>>>> c268cdff9b0899b80724fb30e5b38981824699ed
 
 @Entity()
 export class Producto {
     @PrimaryGeneratedColumn()
+<<<<<<< HEAD
     id: number = 0;
     @Column()
     nombre: string = "";
@@ -14,3 +19,14 @@ export class Producto {
     distribuciones: Distribucion[] = [];
 
 }
+=======
+    id:number=0
+
+    @Column()
+    stock: number=0
+
+    @Column()
+    nombre: string = "";
+
+}
+>>>>>>> c268cdff9b0899b80724fb30e5b38981824699ed

@@ -1,4 +1,4 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 import { AgenteComercial } from "./AgenteComercial";
 import { ICliente } from "./ICliente";
 import { Local } from "./Local";
