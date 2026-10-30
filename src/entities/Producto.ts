@@ -10,7 +10,7 @@ export class Producto {
     id: number = 0;
     @Column()
     nombre: string = "";
-    @Column("decimal", { precision: 10, scale: 2, default: 0 })
+    @Column()
     stock: number = 0;
     @OneToMany(() => Transaccion, transaccion => transaccion.producto)
     transacciones: Transaccion[] = [];

@@ -1,4 +1,5 @@
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { Distribucion } from "./Distribucion";
 
 @Entity()
 export class Almacen {
@@ -9,6 +10,6 @@ export class Almacen {
     @Column()
     ubicacion:string="";
     @OneToMany(()=>Distribucion,distribucion=>distribucion.almacen)
-    distribuciones:Distribucion[] = [];
+    distribuciones:Distribucion[]=[];
     
 }
