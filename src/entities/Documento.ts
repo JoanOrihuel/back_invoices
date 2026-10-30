@@ -1,7 +1,7 @@
 import { Entity, PrimaryGeneratedColumn, OneToMany } from "typeorm"
 import { Transaccion } from "./Transaccion";
-@Entity()
 
+@Entity()
 export class Documento {
     @PrimaryGeneratedColumn()
     id:number=0;

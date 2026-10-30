@@ -9,21 +9,21 @@ export class Transaccion {
     @PrimaryGeneratedColumn()
     id:number=0
     @Column()
-    data: Date = new Date()
+    data:Date=new Date()
     @Column()
-    mesura: string = "";
+    mesura:string="";
     @Column()
-    preu_unitari: number = 0;
+    preu_unitari:number=0;
     @Column()
-    unitats: number = 0;
+    unitats:number=0;
     @Column()
-    cantitat: number = 0;
+    cantitat:number=0;
     @Column()
-    lot: string = "";
+    lot:string="";
     @Column()
-    iva: number = 0;
+    iva:number=0;
     @Column()
-    unidadMedida: UnidadMedida = UnidadMedida.UNIDAD;
+    unidadMedida:UnidadMedida=UnidadMedida.UNIDAD;
     @ManyToOne(() => Producto, producto => producto.transacciones)
     producto: Producto;
     @ManyToOne(() => AgenteComercial)

@@ -1,10 +1,8 @@
-import { Entity, PrimaryGeneratedColumn, Column } from "typeorm"
-import { ChildEntity } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn } from "typeorm"
 import { Documento } from "./Documento";
 
-@ChildEntity()
+@Entity()
 export class Configuracion extends Documento {
-
     @PrimaryGeneratedColumn()
     id: number = 0;
 
