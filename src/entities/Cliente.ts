@@ -14,5 +14,5 @@ export class Cliente extends AgenteComercial implements ICliente {
     nombre:string=""
 
     @ManyToOne(()=>Local,(local=>local.clientes))
-    local: Local
+    local:Local
 }

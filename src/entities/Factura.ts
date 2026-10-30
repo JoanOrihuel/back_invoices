@@ -4,12 +4,10 @@ import { Albaran } from "./Albaran";
 
 @ChildEntity()
 export class Factura extends Documento {
-
      @PrimaryGeneratedColumn()
     id: number = 0;
     
-    @OneToMany(
-    () => Albaran,albaran => albaran.factura)
+    @OneToMany(() => Albaran,albaran => albaran.factura)
     albarans: Albaran[];
 
 }
