@@ -9,10 +9,6 @@ AppDataSource.initialize().then(async () => {
     // create express app
     const app = express()
     app.use(bodyParser.json())
-<<<<<<< HEAD
-=======
-
->>>>>>> 335e05aa99bec7b0c618e95105b5294d4ccc7b65
     // register express routes from defined application routes
     Routes.forEach(route => {
         (app as any)[route.method](route.route, (req: Request, res: Response, next: Function) => {
