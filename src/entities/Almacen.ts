@@ -10,6 +10,6 @@ export class Almacen {
     @Column()
     ubicacion:string="";
     @OneToMany(()=>Distribucion,distribucion=>distribucion.almacen)
-    distribuciones:Distribucion[]=[];
+    distribuciones:Distribucion[];
     
 }

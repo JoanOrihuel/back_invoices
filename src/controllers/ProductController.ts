@@ -1,10 +1,10 @@
 import { AppDataSource } from "../data-source"
 import { NextFunction, Request, Response } from "express"
-import { User } from "../entities/User"
+import { Producto } from "../entities/Producto"
 
-export class UserController {
+export class ProductController {
 
-    private userRepository = AppDataSource.getRepository(User)
+    private userRepository = AppDataSource.getRepository(Producto)
 
     async all(request: Request, response: Response, next: NextFunction) {
         return this.userRepository.find()
@@ -19,7 +19,7 @@ export class UserController {
         })
 
         if (!user) {
-            return "unregistered user"
+            return "unregistered product"
         }
         return user
     }
@@ -27,7 +27,7 @@ export class UserController {
     async save(request: Request, response: Response, next: NextFunction) {
         const { firstName, lastName, age } = request.body;
 
-        const user = Object.assign(new User(), {
+        const user = Object.assign(new Producto(), {
             firstName,
             lastName,
             age
@@ -42,12 +42,12 @@ export class UserController {
         let userToRemove = await this.userRepository.findOneBy({ id })
 
         if (!userToRemove) {
-            return "this user not exist"
+            return "this product not exist"
         }
 
         await this.userRepository.remove(userToRemove)
 
-        return "user has been removed"
+        return "product has been removed"
     }
 
 }
