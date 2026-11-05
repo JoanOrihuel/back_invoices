@@ -2,22 +2,22 @@ import { ProductController } from "./controllers/ProductController"
 
 export const RoutesProduct = [{
     method: "get",
-    route: "/products",
+    route: "/productos",
     controller: ProductController,
     action: "all"
 }, {
     method: "get",
-    route: "/products/:id",
+    route: "/productos/:id",
     controller: ProductController,
     action: "one"
 }, {
     method: "post",
-    route: "/products",
+    route: "/productos",
     controller: ProductController,
     action: "save"
 }, {
     method: "delete",
-    route: "/products/:id",
+    route: "/productos/:id",
     controller: ProductController,
     action: "remove"
 }]
