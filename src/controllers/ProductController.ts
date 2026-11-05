@@ -2,52 +2,51 @@ import { AppDataSource } from "../data-source"
 import { NextFunction, Request, Response } from "express"
 import { Producto } from "../entities/Producto"
 
+
 export class ProductController {
 
-    private userRepository = AppDataSource.getRepository(Producto)
+    private productoRepository = AppDataSource.getRepository(Producto)
 
     async all(request: Request, response: Response, next: NextFunction) {
-        return this.userRepository.find()
+        return this.productoRepository.find()
     }
 
     async one(request: Request, response: Response, next: NextFunction) {
         const id = parseInt(request.params.id)
 
 
-        const user = await this.userRepository.findOne({
+        const producto = await this.productoRepository.findOne({
             where: { id }
         })
 
-        if (!user) {
-            return "unregistered product"
+        if (!producto) {
+            return "unregistered producto"
         }
-        return user
+        return producto
     }
 
     async save(request: Request, response: Response, next: NextFunction) {
-        const { firstName, lastName, age } = request.body;
+        const { cantidad } = request.body;
 
         const user = Object.assign(new Producto(), {
-            firstName,
-            lastName,
-            age
+            cantidad
         })
 
-        return this.userRepository.save(user)
+        return this.productoRepository.save(user)
     }
 
     async remove(request: Request, response: Response, next: NextFunction) {
         const id = parseInt(request.params.id)
 
-        let userToRemove = await this.userRepository.findOneBy({ id })
+        let productoToRemove = await this.productoRepository.findOneBy({ id })
 
-        if (!userToRemove) {
-            return "this product not exist"
+        if (!productoToRemove) {
+            return "this user not exist"
         }
 
-        await this.userRepository.remove(userToRemove)
+        await this.productoRepository.remove(productoToRemove)
 
-        return "product has been removed"
+        return "producto has been removed"
     }
 
-}
+}  
